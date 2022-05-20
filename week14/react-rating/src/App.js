@@ -1,40 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
 import MovieList from './components/MovieList';
-import ReviewList from './components/ReviewList';
-import Review from './components/Review';
-import Stars from './components/Stars';
+
 function App() {
+  // expected output:
+  // three movie components with <p> for name and genre
+  // each movie component has two reviews (<div>s) and ratings that are hardcoded.
+  // the reviews are the same for each movie
   const movies = [
-    {name: 'The Adam Project', genre: 'Sci-Fi Action/Adventure'},
-    {name: 'Turning Red', genre: 'Animated, Family'},
-    {name: 'IP Man', genre: 'Foreign'}
+    {name: 'The Adam Project', genre: 'Sci-Fi Action/Adventure', Year: '2022'},
+    {name: 'Turning Red', genre: 'Animated, Family', Year: '2022' },
+    {name: 'IP Man', genre: 'Foreign', Year: '2010'}
   ];
   return (
     <div className="App">
       <MovieList movies={movies}/>
+      
     </div>
   );
-  // const styles = StyleSheet.create({
-  //   container: {
-  //     flex: 1,
-  //     justifyContent: "center",
-  //   },
-  //   text: {
-  //     fontSize: 16
-  //   },
-  //   wrapperCustom: {
-  //     borderRadius: 8,
-  //     padding: 6
-  //   },
-  //   logBox: {
-  //     padding: 20,
-  //     margin: 10,
-  //     borderWidth: StyleSheet.hairlineWidth,
-  //     borderColor: '#f0f0f0',
-  //     backgroundColor: '#f9f9f9'
-  //   }
-  // });
 }
 
 export default App;

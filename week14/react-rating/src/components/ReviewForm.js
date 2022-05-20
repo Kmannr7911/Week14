@@ -1,68 +1,34 @@
-import { state } from "jshint/src/state";
+import prodParams from "jshint/src/prod-params";
 import React, { Component } from "react";
-import Movie from "Movie.jsx";
 import { ReactDOM } from 'react-dom/client';
 
 class ReviewForm extends Component{  
-showForm = () => {
-
+  constructor(props) {
+    super();
+    this.props = props;
+  }
+  
+  showForm = () => {
     return (
-      <div>
-      { movies.map((movie) => { return movie.name}) }
-      <form>
-        <label>Movie Review </label>
-          <input
-            type="text" 
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-      </form>
-    </div>
+        <form>
+          <label>Review form</label>
+          <input></input>
+        </form>
     );
-    }
+  }
+
+
   render(){
+    const input = 'hard coded'; // todo: dynamically retrieve value of <input> from form
     return (
       <div className="Submit">
         <div className="button-container">
         {this.showForm()}
         </div>  
+        <button onClick={() => this.props.setReviews(input)}>Submit</button>
       </div>
     );
   }
 }
   
-  // const root = ReactDOM.createRoot(document.getElementById('root'));
-  // root.render(<MyForm />);
-  
-  // const Rate = () => {
-  // const [rate, setRate] = useState(0);
-  // return (
-  //   <Container>
-  //   {[...Array(5)].map((item, index) => {
-  //     const givenRating = index + 1;
-  //     return (
-  //     <label>
-  //       <Radio
-  //       type="radio"
-  //       value={givenRating}
-  //       onClick={() => {
-  //         setRate(givenRating);
-  //         alert(`Are you sure you want to give ${givenRating} stars ?`);
-  //       }}
-  //       />
-  //       <Rating>
-  //       <FaStar
-  //         color={
-  //         givenRating < rate || givenRating === rate
-  //           ? "000"
-  //           : "rgb(192,192,192)"
-  //         }
-  //       />
-  //       </Rating>
-  //     </label>
-  //     );
-  //   })}
-  //   </Container>
-  // );
-  // };
-  export default ReviewForm
+export default ReviewForm;

@@ -1,6 +1,6 @@
 .App {
   text-align: left;
-  background-color: white;
+  background-color: goldenrod;
 }
 
 .App-logo {
@@ -39,9 +39,9 @@
 }
 
 button {
-  background-color: transparent;
-  border: none;
-  outline: none;
+  background-color: lightgoldenrodyellow;
+  border: black;
+  outline: black;
   cursor: pointer;
 }
 .on {
