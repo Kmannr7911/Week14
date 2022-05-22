@@ -12,14 +12,16 @@ class ReviewForm extends Component{
     return (
         <form>
           <label>Review form</label>
-          <input></input>
+          <div className = "e-input-group"> 
+            <input className="e-input" type = "text" placeholder="Enter Comment" onFocus={this.onInputFocus} onBlur={this.onInputBlur}></input>
+          </div>
         </form>
     );
   }
 
 
   render(){
-    const input = 'hard coded'; // todo: dynamically retrieve value of <input> from form
+    const input = 'I thought this movie was good.'; // todo: dynamically retrieve value of <input> from form
     return (
       <div className="Submit">
         <div className="button-container">

@@ -10,3 +10,4 @@ const ReviewList = ({ movies }) => {
   };
     
   export default ReviewList;
+  

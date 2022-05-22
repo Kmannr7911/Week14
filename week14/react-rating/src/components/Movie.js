@@ -18,7 +18,7 @@ const Movie = ({ name, genre, year }) => {
   return (
     <div>
   
-    <h3>Movie</h3>
+    <p>Movie</p>
       <p>{name}</p>
       <p>{genre}</p>
       <p>{year}</p>
